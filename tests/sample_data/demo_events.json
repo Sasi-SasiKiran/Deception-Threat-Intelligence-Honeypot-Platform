@@ -1,0 +1,82 @@
+[
+  {
+    "source_ip": "192.168.1.100",
+    "method": "GET",
+    "endpoint": "/robots.txt",
+    "event_type": "path_probe",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "query": "" },
+    "status_code": 404,
+    "severity": "low"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "GET",
+    "endpoint": "/admin",
+    "event_type": "path_probe",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "query": "" },
+    "status_code": 403,
+    "severity": "medium"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "GET",
+    "endpoint": "/wp-login.php",
+    "event_type": "page_access",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "query": "" },
+    "status_code": 200,
+    "severity": "low"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "POST",
+    "endpoint": "/wp-login.php",
+    "event_type": "login_attempt",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "username": "admin", "password": "[REDACTED]" },
+    "status_code": 401,
+    "severity": "high"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "POST",
+    "endpoint": "/wp-login.php",
+    "event_type": "login_attempt",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "username": "administrator", "password": "[REDACTED]" },
+    "status_code": 401,
+    "severity": "high"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "POST",
+    "endpoint": "/wp-login.php",
+    "event_type": "login_attempt",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "payload_summary": { "username": "root", "password": "[REDACTED]" },
+    "status_code": 401,
+    "severity": "high"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "GET",
+    "endpoint": "/.env",
+    "event_type": "suspicious_request",
+    "user_agent": "curl/7.88.1",
+    "payload_summary": { "query": "" },
+    "status_code": 404,
+    "severity": "high"
+  },
+  {
+    "source_ip": "192.168.1.100",
+    "method": "GET",
+    "endpoint": "/xmlrpc.php",
+    "event_type": "path_probe",
+    "user_agent": "python-requests/2.31.0",
+    "payload_summary": { "query": "" },
+    "status_code": 403,
+    "severity": "medium"
+  }
+]
